@@ -1,14 +1,16 @@
-// ComicSpinnahApp.swift
-// ComicSpinnah
+// ==================================================
+//  ComicSpinnahApp.swift
+//  v0.0.1
+//  ComicSpinnah
 //
-// Author: Shast LeLow
-// Created: 2026-07-02
-// Version: 1.0.0
+//  Created by Shawn Starbird on 2026-07-02.
 //
-// App entry point for ComicSpinnah.
+//  Description:
+//  App entry point for ComicSpinnah.
 //
-// Changelog:
-// - 1.0.0: Initial creation. Replaced SwiftData template shell with minimal app entry point.
+//  Changes:
+//  - v0.0.1: Initial creation.
+// ==================================================
 
 import SwiftUI
 

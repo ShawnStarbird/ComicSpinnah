@@ -1,14 +1,17 @@
-// ContentView.swift
-// ComicSpinnah
+// ==================================================
+//  ContentView.swift
+//  v0.0.1
+//  ComicSpinnah
 //
-// Author: Shast LeLow
-// Created: 2026-07-02
-// Version: 1.0.0
+//  Created by Shawn Starbird on 2026-07-02.
 //
-// Static shell for ComicSpinnah. Displays app title and placeholder sections.
+//  Description:
+//  Static app shell displaying the app title and placeholder sections
+//  for Library, Metadata, and Cleanup.
 //
-// Changelog:
-// - 1.0.0: Initial creation. Replaced SwiftData CRUD template with static shell.
+//  Changes:
+//  - v0.0.1: Initial creation.
+// ==================================================
 
 import SwiftUI
 
