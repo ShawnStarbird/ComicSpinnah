@@ -1,59 +1,58 @@
+// ContentView.swift
+// ComicSpinnah
 //
-//  ContentView.swift
-//  ComicSpinnah
+// Author: Shast LeLow
+// Created: 2026-07-02
+// Version: 1.0.0
 //
-//  Created by Shawn Starbird on 7/2/26.
+// Static shell for ComicSpinnah. Displays app title and placeholder sections.
 //
+// Changelog:
+// - 1.0.0: Initial creation. Replaced SwiftData CRUD template with static shell.
 
 import SwiftUI
-import SwiftData
 
 struct ContentView: View {
-    @Environment(\.modelContext) private var modelContext
-    @Query private var items: [Item]
+    var body: some View {
+        VStack(alignment: .leading, spacing: 24) {
+            VStack(alignment: .leading, spacing: 4) {
+                Text("ComicSpinnah")
+                    .font(.largeTitle)
+                    .fontWeight(.bold)
+                Text("Comic library tools for metadata, organization, and cleanup")
+                    .font(.subheadline)
+                    .foregroundStyle(.secondary)
+            }
+
+            Divider()
+
+            VStack(alignment: .leading, spacing: 12) {
+                PlaceholderSection(title: "Library")
+                PlaceholderSection(title: "Metadata")
+                PlaceholderSection(title: "Cleanup")
+            }
+
+            Spacer()
+        }
+        .padding(32)
+        .frame(minWidth: 480, minHeight: 320)
+    }
+}
+
+private struct PlaceholderSection: View {
+    let title: String
 
     var body: some View {
-        NavigationSplitView {
-            List {
-                ForEach(items) { item in
-                    NavigationLink {
-                        Text("Item at \(item.timestamp, format: Date.FormatStyle(date: .numeric, time: .standard))")
-                    } label: {
-                        Text(item.timestamp, format: Date.FormatStyle(date: .numeric, time: .standard))
-                    }
-                }
-                .onDelete(perform: deleteItems)
-            }
-            .navigationSplitViewColumnWidth(min: 180, ideal: 200)
-            .toolbar {
-                ToolbarItem {
-                    Button(action: addItem) {
-                        Label("Add Item", systemImage: "plus")
-                    }
-                }
-            }
-        } detail: {
-            Text("Select an item")
-        }
-    }
-
-    private func addItem() {
-        withAnimation {
-            let newItem = Item(timestamp: Date())
-            modelContext.insert(newItem)
-        }
-    }
-
-    private func deleteItems(offsets: IndexSet) {
-        withAnimation {
-            for index in offsets {
-                modelContext.delete(items[index])
-            }
+        VStack(alignment: .leading, spacing: 4) {
+            Text(title)
+                .font(.headline)
+            Text("Coming soon")
+                .font(.caption)
+                .foregroundStyle(.tertiary)
         }
     }
 }
 
 #Preview {
     ContentView()
-        .modelContainer(for: Item.self, inMemory: true)
 }
