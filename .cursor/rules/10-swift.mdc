@@ -1,0 +1,47 @@
+---
+description: Swift and SwiftUI standards
+globs:
+  - "**/*.swift"
+alwaysApply: false
+---
+
+# Swift / SwiftUI Rules
+
+Use pragmatic SwiftUI architecture.
+
+## Preferred Structure
+
+Default flow:
+
+```text
+Views
+→ ViewModels
+→ Services
+→ Models
+→ Persistence
+```
+
+## Guidelines
+
+- Keep views small.
+- Keep business logic out of views.
+- Use view models for screen state and coordination.
+- Use services for reusable operational logic.
+- Prefer Apple frameworks.
+- Avoid unnecessary dependencies.
+
+## Testing
+
+Prioritize tests for:
+
+- Parsing
+- Persistence
+- Data transformation
+- Business rules
+- Regression fixes
+
+## Documentation
+
+Document why a type or function exists when it is not obvious.
+
+Do not add noisy comments that merely repeat the code.

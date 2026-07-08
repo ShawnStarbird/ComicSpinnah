@@ -1,0 +1,43 @@
+---
+description: Core repository behavior for AI coding agents
+globs:
+  - "**/*"
+alwaysApply: true
+---
+
+# Core Repository Rules
+
+Prioritize maintainability, clarity, and simplicity.
+
+## Default Behavior
+
+- Prefer simple solutions.
+- Avoid unnecessary abstractions.
+- Preserve existing patterns unless improvement is justified.
+- Keep changes scoped to the requested work.
+- Do not make unrelated formatting or structural changes.
+
+## Planning
+
+When proposing changes:
+
+- Explain the preferred option.
+- Identify tradeoffs.
+- Call out maintenance costs.
+- Avoid enterprise patterns unless justified.
+
+## Implementation
+
+When implementing:
+
+- Make small, coherent changes.
+- Validate with build/test output when possible.
+- Update documentation when behavior changes.
+
+## File Headers
+
+Use the canonical file header standard when creating or materially modifying source files.
+
+Reference:
+
+`/Users/starbird/Library/Mobile Documents/com~apple~CloudDocs/Spinnah/_shared/design/docs/standards/file-headers.md`

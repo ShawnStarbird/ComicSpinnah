@@ -1,0 +1,32 @@
+---
+description: Practical testing guidance
+globs:
+  - "**/*Tests*.swift"
+  - "**/tests/**/*.py"
+alwaysApply: false
+---
+
+# Testing Rules
+
+Use practical testing that protects real functionality.
+
+## Priorities
+
+Test:
+
+1. Business logic
+2. Parsing
+3. Persistence
+4. Data transformation
+5. Regression-prone workflows
+
+## Avoid
+
+- Excessive scaffolding
+- Fragile UI tests
+- Tests that only verify framework behavior
+- Mock-heavy designs that make the app harder to maintain
+
+## Standard
+
+Prefer fewer useful tests over lots of theater.

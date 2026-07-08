@@ -1,0 +1,33 @@
+---
+description: Python script and automation standards
+globs:
+  - "**/*.py"
+alwaysApply: false
+---
+
+# Python Rules
+
+Python is preferred for personal automation and utility scripts.
+
+## Guidelines
+
+- Use `pathlib.Path`.
+- Use `logging` for operational output.
+- Prefer standard library dependencies.
+- Use `config.json` for non-secret configuration.
+- Provide dry-run mode for file-modifying scripts when practical.
+- Fail with actionable errors.
+
+## Shape
+
+Prefer:
+
+```python
+def main() -> int:
+    ...
+
+if __name__ == "__main__":
+    raise SystemExit(main())
+```
+
+Avoid giant procedural scripts.

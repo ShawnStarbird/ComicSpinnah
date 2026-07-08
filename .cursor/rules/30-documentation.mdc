@@ -1,0 +1,33 @@
+---
+description: Documentation standards
+globs:
+  - "**/*.md"
+alwaysApply: false
+---
+
+# Documentation Rules
+
+Documentation should reflect current reality.
+
+## Required Repository Docs
+
+Active repositories should usually include:
+
+- `README.md`
+- `AGENTS.md`
+- `PROJECT-STATUS.md`
+- `CHANGELOG.md`
+
+## Guidelines
+
+- Keep docs concise.
+- Avoid duplicate sources of truth.
+- Clearly label future or deferred work.
+- Update status docs when implementation state changes.
+- Delete or archive stale docs when they become misleading.
+
+## Tone
+
+Use direct, practical language.
+
+Avoid corporate filler.
